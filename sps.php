@@ -131,13 +131,15 @@ $Time=$_POST['timeX'];
 		mysqli_query($db,$query);
 	$query1="SELECT * FROM slot INNER JOIN register ON slot.user_id = register.user_id where slot.user_id = '".$id."'";
 	$result = mysqli_query($db,$query1);
+	 echo '<center>';
+	 echo "<div> YOUR RESERVATION DETAIL IS:";
+    
+    echo '<table border="5">';	     
     while($res=mysqli_fetch_array($result)){
     	
-        echo '<center>';
-
-    	echo '<table border="5">';
-    	echo "YOUR RESERVATION DETAIL IS:";
-    	     
+        
+    	
+    	
              echo '<tr>' ;
              echo '<td>'.$res['slot_no'].'</td>'; 
              echo '<td>'.$res['time_added'].'</td>';
@@ -148,7 +150,7 @@ $Time=$_POST['timeX'];
 }
 }
 echo '</table>';
-echo '</center>';
+echo '</center></div>';
 
 
 
