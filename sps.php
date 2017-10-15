@@ -110,7 +110,7 @@
 <?php
 if(isset($_POST['submit'])){
 	
-$db=mysqli_connect("localhost","root","","sps");
+$db=mysqli_connect('us-cdbr-azure-southcentral-f.cloudapp.net', 'bd175965a430e4', 'b91694c2', 'testappuroo');
 $Slot=$_POST['Select'];
 $Time=$_POST['timeX'];
 	session_start();
