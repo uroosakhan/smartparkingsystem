@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="assets/css/slick/slick.css"> 
         <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
         <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/iconfont.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="assets/css/iconfont.css"> -->
+        <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="assets/css/bootstrap.css">
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/css/bootsnav.css">
