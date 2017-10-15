@@ -137,7 +137,7 @@ $Time=$_POST['timeX'];
 
     	echo '<table border="5">';
     	echo "YOUR RESERVATION DETAIL IS:";
-    	     echo '<br>';
+    	     
              echo '<tr>' ;
              echo '<td>'.$res['slot_no'].'</td>'; 
              echo '<td>'.$res['time_added'].'</td>';
@@ -149,5 +149,9 @@ $Time=$_POST['timeX'];
 }
 echo '</table>';
 echo '</center>';
+
+
+
+
 
 ?>
