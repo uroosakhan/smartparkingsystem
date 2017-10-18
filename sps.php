@@ -103,7 +103,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="#brand">
+                        <a class="navbar-brand" href="index.php">
                             <img src="assets/images/logo.png" class="logo" alt="" style="margin-top:-55px; width:200px;  ">
                             <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
                         </a>
@@ -114,12 +114,12 @@
                     <!-- navbar menu -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#home">Home</a></li>   
-                            <li><a href="#reserve">Reservation</a></li>
+                            <li><a href="index.php">Home</a></li>   
+                            <li><a href="sps.php">Reservation</a></li>
                             <li><a href="#features">Services</a></li>
                             <li><a href="#member">Members</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="indexs.html">Sign In</a></li>
+                            <li><a href="indexs.php">Sign In</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div> 
