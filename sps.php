@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+
+    if (isset($_SESSION['login_user'])) {
+  //echo 'Session is active';
+    }
+    else{
+         header("location: indexs.php");
+    }
+?>
+
 <!doctype html>
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
@@ -110,11 +122,16 @@
 <?php
 if(isset($_POST['submit'])){
 	
-$db=mysqli_connect('us-cdbr-azure-southcentral-f.cloudapp.net', 'bd175965a430e4', 'b91694c2', 'testappuroo');
-$Slot=$_POST['Select'];
-$Time=$_POST['timeX'];
-	session_start();
 
+    if (isset($_SESSION['login_user'])) {
+  //echo 'Session is active';
+    
+	
+
+
+    $db=mysqli_connect('us-cdbr-azure-southcentral-f.cloudapp.net', 'bd175965a430e4', 'b91694c2', 'testappuroo');
+    $Slot=$_POST['Select'];
+    $Time=$_POST['timeX'];
 	$user_id = $_SESSION['login_user'];
 	echo $user_id;
 	$id = 0;
@@ -145,6 +162,7 @@ $Time=$_POST['timeX'];
              echo '<td>'.$res['email'].'</td>';
 
              echo '<tr>';
+}
 }
 }
 echo '</table>';

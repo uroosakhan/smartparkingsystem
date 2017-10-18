@@ -1,4 +1,12 @@
 
+<!-- <?php
+// session_start();
+
+// if (isset($_SESSION['login_user'])) {
+//   header("location: index.php");
+// }
+
+?> -->
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com

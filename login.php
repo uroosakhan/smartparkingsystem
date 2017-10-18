@@ -17,7 +17,7 @@ include("connection.php");
  
   if($count > 0){
   	 $_SESSION['login_user'] = $myusername;         
-          header("location: index.html");
+          header("location: index.php");
       
       }
       else {
