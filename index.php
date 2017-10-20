@@ -82,7 +82,7 @@
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                 <i class="fa fa-bars"></i>
                             </button>
-                            <a class="navbar-brand" href="#brand">
+                            <a class="navbar-brand" href="index.php">
                                 <img src="assets/images/logo.png" class="logo" alt="" style="margin-top:-55px; width:200px;  ">
                                 <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
                             </a>
@@ -223,12 +223,12 @@
                 
 
                 </div>
-    		<div class="col-xs-17">
+    		<div class=" col-md-8 col-xs-4">
                 
-              <button  type="submit" name="submit" class="btn btn-info" style="padding:10px; width:80px; margin-top:40px; background-color:#428bca; ">Book</button>
+              <button  type="submit" name="submit" class="btn btn-info" style="padding:12px; width:80px; margin-top:40px; background-color:#428bca; ">Book</button>
                         
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-md-12 col-sm-12 col-xs-11">
                         <button type="button" class="btn cancelbtn" style="padding:10px; width:80px; margin-top:-65px;"> Cancel</button></div>
             </div>
         </form>
@@ -308,7 +308,7 @@
                                     <div class="test_item fix">
                                         <div class="item_img">
                                             <img class="img-circle" src="img/urusa.jpg" alt="" />
-                                            <i class="fa fa-quote-left"></i>
+                                            <i class="fa fa-quote-left" style="background-color:#428bca;""></i>
                                         </div>
 
                                         <div class="item_text">
@@ -324,7 +324,7 @@
                                     <div class="test_item fix sm-m-top-30">
                                         <div class="item_img">
                                             <img class="img-circle" src="img/aima.jpg" alt="" />
-                                            <i class="fa fa-quote-left"></i>
+                                            <i class="fa fa-quote-left" style="background-color:#428bca;""></i>
                                         </div>
 
                                         <div class="item_text">
@@ -345,7 +345,7 @@
                                     <div class="test_item fix">
                                         <div class="item_img">
                                             <img class="img-circle" src="img/shayan.jpg" alt="" />
-                                            <i class="fa fa-quote-left"></i>
+                                            <i class="fa fa-quote-left" style="background-color:#428bca;""></i>
                                         </div>
 
                                         <div class="item_text">
@@ -472,9 +472,9 @@
                                             <div class="widget_ab_item_text">
                                                 <h6 class="text-white">Email Address :</h6>
                                                 <p>
-    info@ssuet.edu.pk</p>
+    smartparkingsystem@outlook.com</p>
                                             <ul class="list-inline m-top-20">
-                                            <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
+                                            <li>-  <a href="https://www.facebook.com/samrtparkingsys"><i class="fa fa-facebook"></i></a></li>
                                             <li><a href=""><i class="fa fa-twitter"></i></a></li>
                                             <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                                             <li><a href=""><i class="fa fa-google-plus"></i></a></li>-</li>
