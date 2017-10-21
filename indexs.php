@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  
 
 	<div class="main">
-	<a class="navbar-brand" href="index.html">
+	<a class="navbar-brand" href="index.php">
 	<img src="assets/images/logo.png" class="logo" alt="" style="margin-top:-10px; width:200px;  "></a>
 		<div class="header" >
 			<h1>Login or Create a Free Account!</h1>
