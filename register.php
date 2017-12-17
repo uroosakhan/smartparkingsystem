@@ -2,7 +2,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-   $db=mysqli_connect('us-cdbr-azure-southcentral-f.cloudapp.net', 'bd175965a430e4', 'b91694c2', 'testappuroo');
+   $db=mysqli_connect('localhost', 'root', '', 'sps');
 $username=$_POST['username'];
 $email=$_POST['email'];
 $password=$_POST['pass'];
@@ -28,7 +28,6 @@ $password2=$_POST['pass1'];
             $id=mysqli_query($db,$query);
             if($id>0){
                header("location: indexs.php?Message= Congratulations! Account has been Created.");
-               echo " Congratulations! Account has been Created.";
             }   
         }
 

@@ -10,7 +10,7 @@
         $id = 0;
         $user_id = $_SESSION['login_user'];
         //echo $user_id;
-        $db=mysqli_connect('us-cdbr-azure-southcentral-f.cloudapp.net', 'bd175965a430e4', 'b91694c2', 'testappuroo');                
+        $db=mysqli_connect('localhost', 'root', '', 'sps');                
         $query1="SELECT * FROM register where username = '".$user_id."'";
         $result = mysqli_query($db,$query1);
         while($res=mysqli_fetch_array($result)){
@@ -22,9 +22,22 @@
             $Slot=$_POST['Select'];
             $Time=$_POST['timeX'];
             if (isset($_SESSION['login_user'])) {
-         
-                $query= "INSERT INTO `slot` (`slot_no`,`time_added`,`user_id`) VALUES('".$Slot."','".$Time."','".$id."')";
-                mysqli_query($db,$query);
+                $Date = explode(' ', $Time); 
+                $query1="SELECT slot_no FROM slot where DATE(time_added) = '".$Date[0]."' and slot_no = '".$Slot."'" ;
+                $result=mysqli_query($db,$query1);
+                //echo $query1;
+                $count=mysqli_num_rows($result);
+
+                if($count > 0){         
+                          header("location: index.php?Message=Slot Reserved");
+                }
+                else {
+                     $query= "INSERT INTO `slot` (`slot_no`,`time_added`,`user_id`) VALUES('".$Slot."','".$Time."','".$id."')";
+                     mysqli_query($db,$query);
+                }
+                  
+                
+               
             
             }
         }

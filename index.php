@@ -202,8 +202,15 @@
 
                     <div class="form-group has-feedback">
 
-                    <label for="Select1" class="col-md-8 control-label" style="color:#8c8c8c; ">Select your Slot Number:</label>
-            <select name="Select" class="form-control" style=" border-color:#cccccc; background-color:#eee;  ">
+                    <label for="dtp_input1" class="col-md-8 control-label">Enter Reservation Time</label>
+                        <div class="input-group date form_datetime col-md-12"  data-link-field="dtp_input1" >
+                            <input class="form-control" size="16" type="text" value="" name="timeX" readonly >
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+
+                    <label for="Select1" class="col-md-8 control-label"  style="color:#8c8c8c; ">Select your Slot Number:</label>
+            <select name="Select" class="form-control" style=" border-color:#cccccc; background-color:#eee;">
               <option>A1</option>
               <option>A2</option>
               <option>A3</option>
@@ -211,15 +218,19 @@
               <option>A5</option>
             </select>
 
-                        <label for="dtp_input1" class="col-md-8 control-label">Enter Reservation Time</label>
-                        <div class="input-group date form_datetime col-md-12"  data-link-field="dtp_input1" >
-                            <input class="form-control" size="16" type="text" value="" name="timeX" readonly >
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-        					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-                        </div>
+                        
 
         				<input type="hidden" id="dtp_input1" value="" /><br/>
                          <p style="color:#ba0000;"> *After the 10mins of the given time,reservation will be void if you're fail to reach.</p> 
+
+                         <?php
+                     echo '<center>';
+                    if(isset($_GET['Message'])){
+                        echo $_GET['Message'];      
+                    
+                    }
+                     echo '</center>';
+                                ?>  
                     
 
                     </div>
@@ -567,6 +578,9 @@
         <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
         <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
         <script type="text/javascript">
+            // $(document).ready(function(){
+            //     alert("uroosa")
+            // });
             $('.form_datetime').datetimepicker({
                 //language:  'fr',
                 weekStart: 1,
