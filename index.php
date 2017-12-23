@@ -98,7 +98,7 @@
                                     <li><a href="#features">Services</a></li>
                                     <li><a href="#member">Members</a></li>
                                     <li><a href="#contact">Contact</a></li>
-                                    <li><a href="indexs.html">Sign In</a></li>
+                                    <li><a href="indexs.php">Sign In</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div> 

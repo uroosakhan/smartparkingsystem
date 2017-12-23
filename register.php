@@ -24,12 +24,14 @@ $password2=$_POST['pass1'];
             echo "<h2>Passwords Don't Match</h2>", "<p>The Passwords you entered didn't match</p>";
         }
         elseif($password == $password2){
-            echo "this condition is running";
+            #echo "this condition is running";
             $query="INSERT INTO `register`(`username`, `password`, `email`) values ('".$username."','".$password."','".$email."')";
             $id=mysqli_query($db,$query);
             if($id>0){
                header("location: indexs.php?Message= Congratulations! Account has been Created.");
             }   
+            echo "test me if inserts failed";
+            echo $id;
         }
 
 
