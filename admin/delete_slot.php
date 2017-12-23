@@ -30,10 +30,10 @@ $id = $_GET['id'];
 
 // delete the entry
 echo $id;
-$query = "DELETE FROM slot WHERE slot_id='".$id."'";
+$query = "DELETE FROM slot_admin WHERE slot_id='".$id."'";
 $result = mysqli_query($db,$query);
 if($result > 0){
-	header("Location: ../admin/admin_slot.php");
+	header("Location: ../admin/adslots.php");
 }
 else{
 	echo "delete failed";			

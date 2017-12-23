@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<html lang="en">
 
 	<head>
@@ -72,12 +72,12 @@
 	            <li>
 	              <a href="register.html">Registration Page</a>
 	            </li>
-	            <li>
+	            <!-- <li>
 	              <a href="forgot-password.html">Forgot Password Page</a>
 	            </li>
 	            <li>
 	              <a href="blank.html">Blank Page</a>
-	            </li>
+	            </li> -->
 	          </ul>
 	        </li>
 	        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
@@ -234,48 +234,28 @@
 	      <!-- Example DataTables Card-->
 	      <div class="card mb-3">
 	        <div class="card-header">
-	          <i class="fa fa-table"></i> Slots</div>
+	          <i class="fa fa-table"></i> Registerd Users</div>
 	        <div class="card-body">
 	          <div class="table-responsive">
 	            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-	              <thead>
-	                <tr>
-	                  <th>username</th>
-	                  <th>slot number</th>
-	                  <th>Time added</th>
-	                  <th>Delete</th>
-	                  
-	                </tr>
-	              </thead>
-	              <tbody>
-	                <tr>
-	                 <?php
-	                   $db=mysqli_connect('localhost', 'root', '', 'sps');
-	                   $query1="SELECT * FROM slot INNER JOIN register ON slot.user_id = register.user_id where slot.user_id != 0";
-                       $result = mysqli_query($db,$query1);
-		               if(mysqli_num_rows($result)>0)
-		               {
-		                 while($row=mysqli_fetch_array($result))
-		                 	{  
+                 <tbody>
+	              <tr>
+                    <td>
+<form method="post" action="adslots.php">
+<div class="form-group">
+  <label for="usr">Enter a Slot:</label>
+  <input type="text"  name="slot" class="form-control" id="usr">
+</div>
+ <input type="submit" name="submit"  value="Add"> </form>
+ </td>
+</tr>
+</tbody>
 
-					            ?>
-					             <tr>
-					              <td><?php echo $row['username']; ?></td> 
-					              <td><?php echo $row['slot_no']; ?></td> 
-					              <td><?php echo $row['time_added']; ?></td> 
-					              <td><?php echo '<a href="delete_admin.php?id=' . $row['slot_id']. '">Delete</a>' ?></td> 
-					            </tr>
-					            <?php
-
-			            	}
-			            }
-	             	?>
-	                </tr>
-	              </tbody>
+</tbody>
 	            </table>
 	          </div>
 	        </div>
-	        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+	        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
 	      </div>
 	    </div>
 	    <!-- /.container-fluid-->

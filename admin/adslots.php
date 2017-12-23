@@ -1,3 +1,21 @@
+	<?php
+
+if(isset($_POST['submit'])){
+	$Adslot=$_POST['slot'];
+ 	$db=mysqli_connect('localhost', 'root','', 'sps');
+
+	$query="INSERT INTO `slot_admin` (`slot`) values ('".$Adslot."')";
+    //echo $query;
+    $id=mysqli_query($db,$query);
+    if($id>0){
+       header("location: adslots.php?Message=Slot has been added.");
+	}
+}
+
+?>
+
+
+
 	<!DOCTYPE html>
 	<html lang="en">
 
@@ -241,18 +259,18 @@
 	            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 	              <thead>
 	                <tr>
-	                  <th>username</th>
-	                  <th>Email</th>
-	                  <th>Password</th>
+	                  <th>Slot Id</th>
+	                  <th>Slot</th>
+	                 
 	                  <th>Delete</th>
 	                  
 	                </tr>
 	              </thead>
 	              <tbody>
-	                <tr>
+	                
 	                 <?php
-	                   $db=mysqli_connect('us-cdbr-azure-southcentral-f.cloudapp.net', 'bd175965a430e4', 'b91694c2', 'testappuroo');
-	                   $query1="SELECT * FROM register";
+	                   $db=mysqli_connect('localhost', 'root', '', 'sps');
+	                   $query1="SELECT * FROM slot_admin";
 
                        $result = mysqli_query($db,$query1);
 		               if(mysqli_num_rows($result)>0)
@@ -262,24 +280,36 @@
 
 					            ?>
 					             <tr>
-					              <td><?php echo $row['username']; ?></td> 
-					              <td><?php echo $row['email']; ?></td> 
-					              <td><?php echo $row['password']; ?></td> 
-					              <td><?php echo '<a href="delete_regsiter.php?id=' . $row['user_id']. '">Delete</a>' ?></td> 
+					              <td><?php echo $row['slot_id']; ?></td> 
+					              <td><?php echo $row['slot']; ?></td> 
+					              
+					              <td><?php echo '<a href="delete_slot.php?id=' . $row['slot_id']. '">Delete</a>' ?></td> 
 					            </tr>
+
 					            <?php
 
 			            	}
 			            }
 	             	?>
-	                </tr>
+	                
 	              </tbody>
 	            </table>
 	          </div>
 	        </div>
+
+	      		
 	        <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
 	      </div>
 	    </div>
+	    <a class="btn btn-link selected" name="Add Slot" href="add_slot.php" style="margin-left:400px; " >Add Slot</a>
+	     <?php
+                     echo '<center>';
+					if(isset($_GET['Message'])){
+    					echo $_GET['Message'];		
+					
+					}
+                     echo '</center>';
+								?>		
 	    <!-- /.container-fluid-->
 	    <!-- /.content-wrapper-->
 	    <footer class="sticky-footer">
