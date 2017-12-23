@@ -26,12 +26,12 @@ if(isset($_POST['submit'])){
         elseif($password == $password2){
             #echo "this condition is running";
             $query="INSERT INTO `register`(`username`, `password`, `email`) values ('".$username."','".$password."','".$email."')";
+            echo $query;
             $id=mysqli_query($db,$query);
             if($id>0){
                header("location: indexs.php?Message= Congratulations! Account has been Created.");
             }   
-            echo "test me if inserts failed";
-            echo $id;
+            
         }
 
 
