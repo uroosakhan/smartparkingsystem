@@ -250,7 +250,8 @@
 	              <tbody>
 	                <tr>
 	                 <?php
-	                   $db=mysqli_connect('localhost', 'root', '', 'sps');
+	                   $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'smartdb');
+
 	                   $query1="SELECT * FROM slot INNER JOIN register ON slot.user_id = register.user_id where slot.user_id != 0";
                        $result = mysqli_query($db,$query1);
 		               if(mysqli_num_rows($result)>0)

@@ -250,7 +250,8 @@
 	              <tbody>
 	                <tr>
 	                 <?php
-	                   $db=mysqli_connect('localhost', 'root', '', 'sps');
+	                   $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'smartdb');
+
 	                   $query1="SELECT * FROM register";
 
                        $result = mysqli_query($db,$query1);

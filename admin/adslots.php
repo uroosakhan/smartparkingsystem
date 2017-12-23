@@ -2,7 +2,8 @@
 
 if(isset($_POST['submit'])){
 	$Adslot=$_POST['slot'];
- 	$db=mysqli_connect('localhost', 'root','', 'sps');
+ 	$db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'smartdb');
+
 
 	$query="INSERT INTO `slot_admin` (`slot`) values ('".$Adslot."')";
     //echo $query;

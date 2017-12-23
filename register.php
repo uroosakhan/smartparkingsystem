@@ -2,7 +2,8 @@
 <?php
 
 if(isset($_POST['submit'])){
-   $db=mysqli_connect('localhost', 'root', '', 'sps');
+   $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'smartdb');
+
 $username=$_POST['username'];
 $email=$_POST['email'];
 $password=$_POST['pass'];
