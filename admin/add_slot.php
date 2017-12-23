@@ -241,17 +241,17 @@
                  <tbody>
 	              <tr>
                     <td>
-<form method="post" action="adslots.php">
-<div class="form-group">
-  <label for="usr">Enter a Slot:</label>
-  <input type="text"  name="slot" class="form-control" id="usr">
-</div>
- <input type="submit" name="submit"  value="Add"> </form>
- </td>
-</tr>
-</tbody>
+                    <form method="post" action="adslots.php">
+                    <div class="form-group">
+                      <label for="usr">Enter a Slot:</label>
+                      <input type="text"  name="slot" class="form-control" id="usr">
+                    </div>
+                     <input type="submit" name="submit"  value="Add"> </form>
+                     </td>
+                    </tr>
+                    </tbody>
 
-</tbody>
+                    </tbody>
 	            </table>
 	          </div>
 	        </div>
