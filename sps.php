@@ -10,7 +10,7 @@
         $id = 0;
         $user_id = $_SESSION['login_user'];
         //echo $user_id;
-        $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'smartdb');
+        $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'acsm_e12d9356bae7728');
               
         $query1="SELECT * FROM register where username = '".$user_id."'";
         $result = mysqli_query($db,$query1);
