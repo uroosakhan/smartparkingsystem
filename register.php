@@ -4,14 +4,14 @@
 if(isset($_POST['submit'])){
    $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'smartdb');
 
-$username=$_POST['username'];
-$email=$_POST['email'];
-$password=$_POST['pass'];
-$password2=$_POST['pass1'];
+  $username=$_POST['username'];
+  $email=$_POST['email'];
+  $password=$_POST['pass'];
+  $password2=$_POST['pass1'];
 
-//if($password == $password2){
+       //if($password == $password2){
       //echo "in if"
-	//$password =md5($password);
+	   //$password =md5($password);
  
         if( $username == "" || $email == "" || $password == '' || $password2 == '' ){
             echo "<h2>Fields Left Blank</h2>", "<p>Some Fields were left blank. Please fill up all fields.</p>";
