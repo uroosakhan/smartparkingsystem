@@ -1,5 +1,8 @@
 	<?php
 
+
+	include('../session.php');
+ 
 if(isset($_POST['submit'])){
 	$Adslot=$_POST['slot'];
  	$db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'acsm_e12d9356bae7728');
@@ -40,24 +43,13 @@ if(isset($_POST['submit'])){
 	<body class="fixed-nav sticky-footer bg-dark" id="page-top">
 	  <!-- Navigation-->
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-	    <a class="navbar-brand" href="index.html">Admin Panel</a>
+	    <a class="navbar-brand" href="#">Admin Panel</a>
 	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarResponsive">
 	      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-	        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-	          <!-- <a class="nav-link" href="index.html">
-	            <i class="fa fa-fw fa-dashboard"></i>
-	            <span class="nav-link-text">Dashboard</span>
-	          </a> -->
-	        </li>
-	        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-	          <a class="nav-link" href="charts.html">
-	            <i class="fa fa-fw fa-area-chart"></i>
-	            <span class="nav-link-text">Charts</span>
-	          </a>
-	        </li> -->
+	        
 	        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
 	          <a class="nav-link" href="admin_slot.php">
 	            <i class="fa fa-fw fa-table"></i>
@@ -69,16 +61,8 @@ if(isset($_POST['submit'])){
 	          <a class="nav-link" href="admin_register.php">
 	            <i class="fa fa-fw fa-table"></i>
 	            <span class="nav-link-text">Registred users</span>
-	          </a></a>
-	           <!-- <ul class="sidenav-second-level collapse" id="collapseComponents">
-	             <li> 
-	              <a href="navbar.html">Add or Delete Slots</a>
-	            </li>
-	            <!-- <li>
-	              <a href="cards.html">Cards</a>
-	            </li>   
-	          </ul>
-	        </li> -->
+	          </a></a></li>
+	           
 	         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
 	          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
 	          <a class="nav-link" href="adslots.php">
@@ -86,18 +70,18 @@ if(isset($_POST['submit'])){
 	            <span class="nav-link-text">Add or Delete  Slots</span>
 	          </a>  
 	          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-	            <!-- <li>
+	            <li>
 	              <a href="login.html">Login Page</a>
 	            </li>
 	            <li>
 	              <a href="register.html">Registration Page</a>
-	            </li> -->
-	            <!-- <li>
+	            </li>
+	            <li>
 	              <a href="forgot-password.html">Forgot Password Page</a>
 	            </li>
 	            <li>
 	              <a href="blank.html">Blank Page</a>
-	            </li> -->
+	            </li>
 	          </ul>
 	        </li>
 	        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
@@ -145,8 +129,8 @@ if(isset($_POST['submit'])){
 	          </a>
 	        </li>
 	      </ul>
-	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item dropdown">
+	       <ul class="navbar-nav ml-auto">
+	        <!--<li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	            <i class="fa fa-fw fa-envelope"></i>
 	            <span class="d-lg-none">Messages
@@ -200,8 +184,8 @@ if(isset($_POST['submit'])){
 	              </span>
 	              <span class="small float-right text-muted">11:21 AM</span>
 	              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-	            </a>
-	            <div class="dropdown-divider"></div>
+	            </a> -->
+	      <!--       <div class="dropdown-divider"></div>
 	            <a class="dropdown-item" href="#">
 	              <span class="text-danger">
 	                <strong>
@@ -233,7 +217,7 @@ if(isset($_POST['submit'])){
 	                </button>
 	              </span>
 	            </div>
-	          </form>
+	          </form> -->
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
@@ -245,16 +229,16 @@ if(isset($_POST['submit'])){
 	  <div class="content-wrapper">
 	    <div class="container-fluid">
 	      <!-- Breadcrumbs-->
-	      <ol class="breadcrumb">
+	      <!-- <ol class="breadcrumb">
 	        <li class="breadcrumb-item">
 	          <a href="#">Dashboard</a>
 	        </li>
 	        <li class="breadcrumb-item active">Slots</li>
-	      </ol>
+	      </ol> -->
 	      <!-- Example DataTables Card-->
 	      <div class="card mb-3">
 	        <div class="card-header">
-	          <i class="fa fa-table"></i> Registerd Users</div>
+	          <i class="fa fa-table"></i>Add or Delete Slots</div>
 	        <div class="card-body">
 	          <div class="table-responsive">
 	            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -337,7 +321,7 @@ if(isset($_POST['submit'])){
 	          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
 	          <div class="modal-footer">
 	            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-	            <a class="btn btn-primary" href="login.html">Logout</a>
+	            <a class="btn btn-primary" href="../logout.php">Logout</a>
 	          </div>
 	        </div>
 	      </div>

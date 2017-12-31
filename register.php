@@ -25,9 +25,20 @@ if(isset($_POST['submit'])){
         }
         elseif($password == $password2){
             #echo "this condition is running";
-            $query="INSERT INTO `register`(`username`, `password`, `email`) values ('".$username."','".$password."','".$email."')";
+
+            $sql="SELECT user_id FROM register WHERE username='".$username."' or email='".$email."'";
+            //print
+            $result=mysqli_query($db,$sql);
+            $count=mysqli_num_rows($result);
+            //echo count;
+            if($count > 0){
+              header("location: indexs.php?Message= Username Already Exists ");
+            }
+
+            $query="INSERT INTO `register`(`username`, `password`, `email`,`roles`) values ('".$username."','".$password."','".$email."',2)";
             echo $query;
             $id=mysqli_query($db,$query);
+            
             if($id>0){
                header("location: indexs.php?Message= Congratulations! Account has been Created.");
             }   
@@ -36,7 +47,6 @@ if(isset($_POST['submit'])){
 
 
 
-	
    
    //else{
    	//$_SESSION['message']="You are now logged in";

@@ -99,6 +99,7 @@
                                     <li><a href="#member">Members</a></li>
                                     <li><a href="#contact">Contact</a></li>
                                     <li><a href="indexs.php">Sign In</a></li>
+                                    <li><a href="">Admin</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div> 
@@ -210,12 +211,27 @@
                         </div>
 
                     <label for="Select1" class="col-md-8 control-label"  style="color:#8c8c8c; ">Select your Slot Number:</label>
+            <!-- <select name="Select" class="form-control" style=" border-color:#cccccc; background-color:#eee;">
+             
+            </select> -->
+            
+            
+
+
             <select name="Select" class="form-control" style=" border-color:#cccccc; background-color:#eee;">
-              <option>A1</option>
-              <option>A2</option>
-              <option>A3</option>
-              <option>A4</option>
-              <option>A5</option>
+        
+                 <?php  
+                    include ("connection.php");
+                    $sql = "SELECT * FROM slot_admin";
+                    $results=mysqli_query($db,$sql);
+                    while($row = mysqli_fetch_assoc($results))
+                    {
+                        ?>
+                        <!-- Separated HTML and PHP -->
+                        <option value="<?php echo $row['slot']?>"><?php echo $row['slot']?></option>
+                        <?php
+                    }
+                ?>
             </select>
 
                         

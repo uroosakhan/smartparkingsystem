@@ -1,3 +1,10 @@
+<?php 
+
+	include('../session.php');
+ ?>
+
+
+
 <!DOCTYPE html>
 	<html lang="en">
 
@@ -21,7 +28,7 @@
 	<body class="fixed-nav sticky-footer bg-dark" id="page-top">
 	  <!-- Navigation-->
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-	    <a class="navbar-brand" href="index.html">Admin Panel</a>
+	    <a class="navbar-brand" href="#">Admin Panel</a>
 	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -51,6 +58,16 @@
 	            <i class="fa fa-fw fa-table"></i>
 	            <span class="nav-link-text">Registred users</span>
 	          </a></a>
+
+
+	          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Registred Users">
+	          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+	          <a class="nav-link" href="adslots.php">
+	            <i class="fa fa-fw fa-table"></i>
+	            <span class="nav-link-text">Add or Delete Slots</span>
+	          </a></a>
+	         
+	        </li>
 	         <!--  <ul class="sidenav-second-level collapse" id="collapseComponents">
 	             <li> 
 	              <a href="navbar.html">Navbar</a>
@@ -126,7 +143,7 @@
 	        </li>
 	      </ul>
 	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item dropdown">
+	        <!-- <li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	            <i class="fa fa-fw fa-envelope"></i>
 	            <span class="d-lg-none">Messages
@@ -214,7 +231,7 @@
 	              </span>
 	            </div>
 	          </form>
-	        </li>
+	        </li> -->
 	        <li class="nav-item">
 	          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
 	            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
@@ -225,16 +242,16 @@
 	  <div class="content-wrapper">
 	    <div class="container-fluid">
 	      <!-- Breadcrumbs-->
-	      <ol class="breadcrumb">
+	      <!-- <ol class="breadcrumb">
 	        <li class="breadcrumb-item">
 	          <a href="#">Dashboard</a>
 	        </li>
 	        <li class="breadcrumb-item active">Slots</li>
-	      </ol>
+	      </ol> -->
 	      <!-- Example DataTables Card-->
 	      <div class="card mb-3">
 	        <div class="card-header">
-	          <i class="fa fa-table"></i> Registerd Users</div>
+	          <i class="fa fa-table"></i> Add Slots</div>
 	        <div class="card-body">
 	          <div class="table-responsive"> 
 	            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -284,7 +301,7 @@
 	          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
 	          <div class="modal-footer">
 	            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-	            <a class="btn btn-primary" href="login.html">Logout</a>
+	            <a class="btn btn-primary" href="../logout.php">Logout</a>
 	          </div>
 	        </div>
 	      </div>
