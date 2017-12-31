@@ -98,8 +98,8 @@
                                     <li><a href="#features">Services</a></li>
                                     <li><a href="#member">Members</a></li>
                                     <li><a href="#contact">Contact</a></li>
-                                    <li><a href="indexs.php">Sign In</a></li>
-                                    <li><a href="">Admin</a></li>
+                                    <li><a href="indexs.php">Register</a></li>
+                                    
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div> 
@@ -358,7 +358,7 @@
                                                 <h5>Syeda Aiman Rukhsar</h5>
                                                 <h6>syedaaimanrukhsar@gmail.com</h6>
 
-                                                <p>Graphic Designer , Database Designer</p>
+                                                <p>Graphic Designer , Web designer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -377,9 +377,9 @@
 
                                             <div class="item_text">
                                                 <h5>Syed Shayan Ul Hasnat</h5>
-                                                <h6>syedshyan@gmail.com</h6>
+                                                <h6>syed.shayan95@gmail.com</h6>
 
-                                                <p>Android Developer, Database Designer</p>
+                                                <p>Android Developer, Hardware developer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -393,9 +393,9 @@
 
                                             <div class="item_text">
                                                 <h5>Waleed Rizwan</h5>
-                                                <h6>waleed@gmail.com</h6>
+                                                <h6>, wal361law@gmail.com</h6>
 
-                                                <p>Hardware Designer, Database Designer</p>
+                                                <p>Hardware developer, Android Developer</p>
                                             </div>
                                         </div>
                                     </div>
