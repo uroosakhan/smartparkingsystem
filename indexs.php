@@ -33,7 +33,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="header" >
 			<h1>Login or Create a Free Account!</h1>
 		</div>
-		<p>After the 10mins of the given time,reservation will be void if you're fail to reach. </p>
+		
 			<form method="post" action="register.php">
 				<ul class="left-form">
 					<h2>New Account:</h2>

@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
             echo "<h2>Passwords Don't Match</h2>", "<p>The Passwords you entered didn't match</p>";
         }
         elseif($password == $password2){
-            #echo "this condition is running";
+            //echo "this condition is running";
 
             $sql="SELECT user_id FROM register WHERE username='".$username."' or email='".$email."'";
             //print

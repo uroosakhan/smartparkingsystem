@@ -4,15 +4,7 @@
    
    $user_check = $_SESSION['login_user'];
    $user_role = $_SESSION['roles'];
-   
- 
-
-
-
-
-
-   
-   
+  
    if(!isset($_SESSION['login_user'])){
    	try{
       header("location:indexs.php");

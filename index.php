@@ -236,9 +236,7 @@
 
                         
 
-        				<input type="hidden" id="dtp_input1" value="" /><br/>
-                         <p style="color:#ba0000;"> *After the 10mins of the given time,reservation will be void if you're fail to reach.</p> 
-
+        				
                          <?php
                      echo '<center>';
                     if(isset($_GET['Message'])){

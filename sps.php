@@ -24,7 +24,7 @@
             $Time=$_POST['timeX'];
             if (isset($_SESSION['login_user'])) {
                 $Date = explode(' ', $Time); 
-                $query1="SELECT slot_no FROM slot where DATE(time_added) = '".$Date[0]."' and slot_no = '".$Slot."'" ;
+                $query1="SELECT slot_no FROM slot where DATE(time_added) = '".$Date[0]."' and slot_no = '".$Slot."' and available =0" ;
                 $result=mysqli_query($db,$query1);
                 //echo $query1;
                 $count=mysqli_num_rows($result);
@@ -145,7 +145,7 @@
                             <li><a href="#features">Services</a></li>
                             <li><a href="#member">Members</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="indexs.php">Sign In</a></li>
+                            <li><a href="indexs.php">Register</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div> 
