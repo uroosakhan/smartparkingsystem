@@ -33,7 +33,7 @@ include("connection.php");
       
       }
       else {
-      echo "Wrong Username or Password";
+          header("location: indexs.php?Message=Wrong Username or Password");
       }
   }
 ?>

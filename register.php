@@ -19,9 +19,12 @@ if(isset($_POST['submit'])){
         
         elseif( !ctype_alnum($username) ){
             echo "<h2>Invalid Username</h2>", "<p>The Username is not valid. Only ALPHANUMERIC characters are allowed and shouldn't exceed 10 characters.</p>";
+
+            header("location: indexs.php?Message= The Username is not valid. Only ALPHANUMERIC characters are allowed and shouldn't exceed 10 characters. ");
         }
         elseif($password != $password2){
             echo "<h2>Passwords Don't Match</h2>", "<p>The Passwords you entered didn't match</p>";
+            header("location: indexs.php?Message= Passwords Don't Match ");
         }
         elseif($password == $password2){
             //echo "this condition is running";
