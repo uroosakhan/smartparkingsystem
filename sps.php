@@ -1,5 +1,6 @@
     <?php
         session_start();
+        include("connection.php");
         
         if (isset($_SESSION['login_user'])) {
             
@@ -10,7 +11,7 @@
         $id = 0;
         $user_id = $_SESSION['login_user'];
         //echo $user_id;
-        $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'acsm_e12d9356bae7728');
+        
               
         $query1="SELECT * FROM register where username = '".$user_id."'";
         $result = mysqli_query($db,$query1);
@@ -24,7 +25,7 @@
             $Time=$_POST['timeX'];
             if (isset($_SESSION['login_user'])) {
                 $Date = explode(' ', $Time); 
-                $query1="SELECT slot_no FROM slot where DATE(time_added) = '".$Date[0]."' and slot_no = '".$Slot."' and available =0" ;
+                $query1="SELECT slot_no FROM slot where DATE(time_added) = '".$Date[0]."' and slot_no = '".$Slot."' " ;
                 $result=mysqli_query($db,$query1);
                 //echo $query1;
                 $count=mysqli_num_rows($result);

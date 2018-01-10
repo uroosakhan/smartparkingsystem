@@ -12,8 +12,7 @@ Deletes a specific entry from the 'players' table
 
 // connect to the database
 
-$db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'acsm_e12d9356bae7728');
-
+include("connection.php");
 
 
 

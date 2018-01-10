@@ -2,11 +2,10 @@
 
 
 	include('../session.php');
- 
+ include("connection.php");
 if(isset($_POST['submit'])){
 	$Adslot=$_POST['slot'];
- 	$db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'acsm_e12d9356bae7728');
-
+ 	
 
 	$query="INSERT INTO `slot_admin` (`slot`) values ('".$Adslot."')";
     //echo $query;
@@ -254,7 +253,7 @@ if(isset($_POST['submit'])){
 	              <tbody>
 	                
 	                 <?php
-	                   $db = mysqli_connect('us-cdbr-azure-central-a.cloudapp.net', 'b034b7d7b2f55d', '2c810d90', 'acsm_e12d9356bae7728');
+	                   include("connection.php");
 	                   $query1="SELECT * FROM slot_admin";
 
                        $result = mysqli_query($db,$query1);

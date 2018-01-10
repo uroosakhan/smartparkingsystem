@@ -204,7 +204,7 @@
                     <div class="form-group has-feedback">
 
                     <label for="dtp_input1" class="col-md-8 control-label">Enter Reservation Time</label>
-                        <div class="input-group date form_datetime col-md-12"  data-link-field="dtp_input1" >
+                        <div class="input-group date form_datetime col-md-12"  data-link-field="dtp_input1" data-date="2013-02-21T15:25:00Z" >
                             <input class="form-control" size="16" type="text" value="" name="timeX" readonly >
                             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -595,8 +595,11 @@
             // $(document).ready(function(){
             //     alert("uroosa")
             // });
+
+
             $('.form_datetime').datetimepicker({
                 //language:  'fr',
+                startDate: new Date(),
                 weekStart: 1,
                 todayBtn:  1,
         		autoclose: 1,
@@ -605,27 +608,8 @@
         		forceParse: 0,
                 showMeridian: 1
             });
-        	$('.form_date').datetimepicker({
-                language:  'fr',
-                weekStart: 1,
-                todayBtn:  1,
-        		autoclose: 1,
-        		todayHighlight: 1,
-        		startView: 2,
-        		minView: 2,
-        		forceParse: 0
-            });
-        	$('.form_time').datetimepicker({
-                language:  'fr',
-                weekStart: 1,
-                todayBtn:  1,
-        		autoclose: 1,
-        		todayHighlight: 1,
-        		startView: 1,
-        		minView: 0,
-        		maxView: 1,
-        		forceParse: 0
-            });
+        	
+
         </script>
             </body>
         </html>
